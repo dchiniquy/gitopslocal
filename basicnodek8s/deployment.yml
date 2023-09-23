@@ -1,5 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
+namespace: cattle-system
 metadata:
   name: hellok8s-config
 data:
@@ -9,6 +10,7 @@ data:
 
 apiVersion: v1
 kind: Service
+namespace: cattle-system
 metadata:
   name: hellok8s-svc
 spec:
@@ -22,6 +24,7 @@ spec:
 
 apiVersion: apps/v1
 kind: Deployment
+namespace: cattle-system
 metadata:
   name: hellok8s
 spec:
