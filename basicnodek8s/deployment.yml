@@ -1,6 +1,5 @@
 apiVersion: v1
 kind: ConfigMap
-namespace: cattle-system
 metadata:
   name: hellok8s-config
 data:
