@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: hellok8s-config
+  namespace: cattle-system
 data:
   MESSAGE: "It works with a ConfigMap!"
 
@@ -9,9 +10,9 @@ data:
 
 apiVersion: v1
 kind: Service
-namespace: cattle-system
 metadata:
   name: hellok8s-svc
+  namespace: cattle-system
 spec:
   selector:
     app: hellok8s
@@ -23,9 +24,9 @@ spec:
 
 apiVersion: apps/v1
 kind: Deployment
-namespace: cattle-system
 metadata:
   name: hellok8s
+  namespace: cattle-system
 spec:
   replicas: 2
   selector:
